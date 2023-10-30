@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/assets/css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Home</title>
+
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <style>
+    html {
+        font-size: 10px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    body {
+        background: linear-gradient(50deg, #000d42, #242424);
+        width: 100%;
+        height: 100vh;
+    }
+
+    #main {
+        margin-top: 2rem;
+        width: min(120rem, 70%);
+        max-width: 1800px;
+        margin-inline: auto;
+    }
+
+    .container{
+        display: flex;
+        justify-content:center;
+    }
+
+    .container .header {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .container .header nav {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        margin-top: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container .header nav .logo {
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2.5px;
+        width: 50px;
+        height: 90%;
+    }
+
+    .container .header nav .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container .header nav ul li a {
+        justify-content: center;
+        margin-top: 10px;
+        font-size: 5rem;
+    }
+
+    .container .header nav ul li a i {
+        justify-content: center;
+        margin-top: 5px;
+        font-size: 5rem;
+        color: #569cac;
+        position: relative;
+        display: flex;
+    }
+
+    .container .header nav ul li a i .num {
+        background-color: rgb(80, 80, 80);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    .container .header nav ul li a i .num span {
+        color: rgb(255, 255, 255);
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .category {
+        margin-top: 3rem;
+        background: linear-gradient(50deg, #242424, #000d42);
+        width: 130rem;
+        margin-bottom: 30rem;
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+    }
+
+    .category .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(auto, 100px));
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    .category .grid li {
+        background-color: #0c162e;
+        border-top-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .category .grid li .item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .category .grid li .item .title {
+        color: #607D8B;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .category .grid li .item .title a h1 {
+        align-self: flex-start;
+        font-size: 1.5rem;
+        color: #60a3bc;
+        padding: 2rem;
+    }
+
+    .category .grid li .item .title span {
+        padding-bottom: 3rem;
+        font-size: 1.5rem;
+        color: #78e08f;
+        padding-left: 2rem;
+    }
+
+    .category .grid li .icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category .grid li .icon .icon2 {
+        width: 5rem;
+        height: 5rem;
+        border-top-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        background-color: #38ada9;
+        display: flex;
+        flex-direction: row;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+    }
+
+    .category .grid li .icon .icon2:hover {
+        width: 100%;
+        height: 100%;
+    }
+
+    .category .grid li i {
+        font-size: 4rem;    
+        color: black;
+    }
+
+    .category .grid li .item .photo {
+        display: flex;
+        flex: 1;
+    }
+
+    .category .grid li .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #main .category .footer {
+        background-color: yellow;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20rem;
+        clip-path: polygon(100% 100%, 100% 70.71%, 100% 0%, 63.21% 45.75%, 33.88% 10.18%, 0% 46.54%, 0% 70.71%, 0% 100%);
+    }
+    </style>
+
+    <!------------------------------------------------------------------------------------------------------------->
+
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            <div class="header">
+                <nav>
+                    <a href="#" class="logo">
+                        <img src="../../static/image/creative-abstract-black-silhouette-running-shoe-design-logo-design-template-free-vector.jpg" alt="logo">
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="/static/assets/css/Chart.css">
+                                <i class='bx bx-shopping-bag'>
+                                    <div class="num">
+                                        <span>{{ form.order_count.value }}</span>
+                                    </div>
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="category">
+                <ul class="grid">
+                    {% for item in products %}
+                    <li>
+                        <section class="item">
+                            <div class="title">
+                                <a href="#">
+                                    <h1>{{item.name}}</h1>
+                                </a>
+                                <span>{{item.price}}تومان</span>
+                            </div>
+                            <form class="icon", method="post">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button class="icon2", type="submit">
+                                        <i class='bx bx-plus' ></i>
+                                    </button>
+                            </form>
+                            <div class="photo">
+                            <img src="{{ item.picture.url }}" alt="category">
+                            </div>
+                        </section>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
