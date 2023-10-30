@@ -1,0 +1,71 @@
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-size: 1.5em;
+    background: linear-gradient(50deg, #000d42, #242424);
+    width: 100%;
+    height: 100vh;
+}
+
+
+.price {
+    background-color: rgba(48, 96, 228, 0.822);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 20px 20px 40px;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#main .price .title {
+    grid-column: 1/-1;
+    background-color: #78e08f;
+    width: 100%;
+    border-bottom: white solid 4px;
+}
+
+#main .price .our1 {
+    font: bold;
+    font-size: 20px;
+    width: 100%;
+    background-color: yellow;
+}
+
+#main .price .info1 {
+    background-color: red;
+}
+
+#main .price .our2 {
+    font: bold;
+    font-size: 20px;
+    background-color: khaki;
+}
+
+#main .price .info2 {
+    background-color: darkgreen;
+}
+
+#main .price .buy {
+    grid-column: 1/-1;
+}

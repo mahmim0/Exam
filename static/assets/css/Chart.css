@@ -1,0 +1,296 @@
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    background-color: #131313;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#main {
+    width: min(120rem, 70%);
+    max-width: 1800px;
+    margin-inline: auto;
+    margin-top: 60px;
+}
+
+#main .header {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content:center;
+}
+
+#main .header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main .header nav .logo {
+    justify-content: flex-start;
+    width: 60px;
+    height: 100%;
+}
+
+#main .header nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main .header nav ul li a {
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 5rem;
+}
+
+#main .header nav ul li a i {
+    justify-content: center;
+    margin-top: 1px;
+    font-size: 5rem;
+    color: #82ccdd;
+    position: relative;
+    display: flex;
+}
+
+#main .allitem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+#main .price {
+    background-color: rgba(48, 96, 228, 0.822);
+    justify-content: flex-start;
+    width: 100%;
+    height: 200px;
+    flex: 1;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#main .price .title {
+    width: 100%;
+}
+
+#main .price .line {
+    background-color: white;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+#main .price .chart2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#main .price .chart2 .inf1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#main .price .chart2 .inf2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#main .price .our1 {
+    font: bold;
+    font-size: 20px;
+    height: 30px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#main .price .info1 {
+    height: 30px;
+    margin-bottom: 10px;
+    width: 50%;
+    direction: rtl;
+}
+
+#main .price .our2 {
+    font: bold;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#main .price .info2 {
+    width: 50%;
+    height: 30px;
+    direction: rtl;
+    margin-bottom: 10px;
+}
+
+#main .price .buy {
+    background-color: orangered;
+    border: none;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+#main .chart {
+    margin-top: 20px;
+    flex: 3;
+}
+
+#main .chart .category {
+    background: linear-gradient(50deg, #242424, #000d42);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    margin-bottom: 100px;
+}
+
+#main .chart .category .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(auto, 150px));
+    gap: 2rem;
+}
+
+#main .chart .category .grid li {
+    background-color: #0c162e;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin: 15px;
+    box-shadow: 5px 5px 10px rgb(6, 0, 56);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#main .chart .category .grid li .item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#main .chart .category .grid li .item .photo {
+    flex: 3;
+    width: 80px;
+    height: 120px;
+}
+
+#main .chart .category .grid li .item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main .chart .category .grid li .item .product {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(48, 96, 228, 0.822);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#main .chart .category .grid li .item .product .number {
+    text-align: center;
+    margin-top: 1.5px;
+}
+
+#main .chart .category .grid li .item .title {
+    color: #607D8B;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+}
+
+#main .chart .category .grid li .item .title a h1 {
+    align-self: flex-start;
+    font-size: 35px;
+    color: #60a3bc;
+}
+
+#main .chart .category .grid li .item .title span {
+    padding-top: 30px;
+    font-size: 15px;
+    color: #78e08f;
+}
+
+#main .chart .category .grid li .item .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+#main .chart .category .grid li .item .icon .icon2 {
+    height: 100%;
+    width: 100%;
+    background-color: #38ada9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+
+#main .chart .category .grid li .item i {
+    font-size: 20px;    
+    color: black;
+}
+
+
+#main .none {
+    grid-area: n;
+}
